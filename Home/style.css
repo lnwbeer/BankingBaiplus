@@ -309,7 +309,7 @@ font-weight: 500;
     border-radius: 2rem;
 }
 .properties-container{
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(440px, auto));
     gap: 3rem;
     padding: 0 50px;

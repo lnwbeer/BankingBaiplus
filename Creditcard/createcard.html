@@ -52,7 +52,7 @@
 
     </div>
 
-    <form action="">
+    <form id="myForm" onsubmit="return validateForm()">
         <div class="inputBox">
             <span>First name</span>
             <input type="text" maxlength="16" class="card-number-input">
@@ -72,19 +72,37 @@
 
         <input type="file" id="uploadBtn">
         <label for="uploadBtn"><i class='bx bx-upload'></i> Upload</label>
-
-        <div class="checkbox">
-
-            <input type="checkbox"><span> Yes,I accept the Term of use</span>
-            
+        <div class="accept">
+            <input type="checkbox" name="option[]" value="option1">
+            <span> Yes,I accept the Term of use</span>
         </div>
-
-
-        <input type="submit" value="submit" class="submit-btn">
+        
+        <input type="submit" value="Submit" class="submit-btn">
+       
     </form>
-
 </div>    
-    
+
+<script>
+  function validateForm() {
+    var checkboxes = document.getElementsByName('option[]');
+    var isChecked = false;
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        isChecked = true;
+        break;
+      }
+    }
+
+    if (!isChecked) {
+      alert('Please accecpt in term');
+      return false;
+    }
+
+    // Form is valid, continue with submission
+    return true;
+  }
+</script>
 
 
 </body>

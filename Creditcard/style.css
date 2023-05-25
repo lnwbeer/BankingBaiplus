@@ -37,6 +37,12 @@
     padding-bottom: 5px;
 }
 
+.container form .accept
+{
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+}
 .container form .inputBox input,
 .container form .inputBox select
 {
@@ -61,7 +67,7 @@
 .container form .submit-btn
 {
     width: 100%;
-    background: blue;
+    background: linear-gradient(45deg, blue, #a0e9ff);
     margin-top: 20px;
     padding: 10px;
     font-size: 20px;
@@ -209,3 +215,4 @@ label{
 .checkbox{
     color: #999;
 }
+

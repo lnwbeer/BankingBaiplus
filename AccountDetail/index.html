@@ -10,7 +10,7 @@
 
 <div class="wrapper">
     <div class="title">
-      Registration Form
+      CREATE ACCOUNTS
     </div>
     <div class="form">
        <div class="inputfield">
@@ -25,44 +25,57 @@
           <label>Confirm Password</label>
           <input type="password" class="input">
        </div> 
+       <div class="inputfield">
+        <label>Thai National ID Card</label>
+        <input type="text" class="input">
+     </div>  
         <div class="inputfield">
-          <label>Gender</label>
+          <label>Accout Type</label>
           <div class="custom_select">
             <select>
               <option value="">Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="male">Savings</option>
+              <option value="female">Fixed Deposit</option>
+              <option value="female">Current Deposit</option>
             </select>
           </div>
        </div> 
-        <div class="inputfield">
-          <label>Email Address</label>
-          <input type="text" class="input">
-       </div> 
-      <div class="inputfield">
-          <label>Phone Number</label>
-          <input type="text" class="input">
-       </div> 
-      <div class="inputfield">
-          <label>Address</label>
-          <textarea class="textarea"></textarea>
-       </div> 
-      <div class="inputfield">
-          <label>Postal Code</label>
-          <input type="text" class="input">
-       </div> 
       <div class="inputfield terms">
           <label class="check">
-            <input type="checkbox">
+            <input type="checkbox" name="checkbox_name[]">
             <span class="checkmark"></span>
           </label>
           <p>Agreed to terms and conditions</p>
        </div> 
+       <form id="myForm" onsubmit="return validateForm()">
       <div class="inputfield">
-        <input type="submit" value="Register" class="btn">
+        <input type="submit" value="Submit" class="btn">
       </div>
+    </form>
     </div>
 </div>	
 	
+<script>
+  function validateForm() {
+    var checkboxes = document.getElementsByName('option[]');
+    var isChecked = false;
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        isChecked = true;
+        break;
+      }
+    }
+
+    if (!isChecked) {
+      alert('Please accecpt in term');
+      return false;
+    }
+
+    // Form is valid, continue with submission
+    return true;
+  }
+</script>
+
 </body>
 </html>
