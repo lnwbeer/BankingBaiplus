@@ -1,224 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Kanit', sans-serif;
-}
 
-.main-creditcard-container
-{
-    min-height: 100vh;
-    background: #eee;
+body {
+    margin: 0px;
+    font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
-    padding-bottom: 60px;
-    border: solid red;
-
+    flex-direction: column;
+    background-color: var(--container-alter-color);
+    height: 100vh;
+    color: var(--container-color);
 }
 
-.main-creditcard-container form
-{
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.1);
-    padding: 20px;
-    width: 600px;
-    padding-top: 160px;
-    border: solid red;
-}
-
-.main-creditcard-container form .inputBox
-{
-    display: block;
-    color: #999;
-    padding-bottom: 5px;
-}
-
-.main-creditcard-container form .accept
-{
-    display: block;
-    color: #999;
-    padding-bottom: 5px;
-}
-.main-creditcard-container form .inputBox input,
-.main-creditcard-container form .inputBox select
-{
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(0,0,0,.3);
-    color:#444;
-}
-
-.main-creditcard-container form .card-flexbox
-{
+.otp-field {
     display: flex;
-    gap:15px;
 }
 
-.main-creditcard-container form .card-flexbox .inputBox
-{
-    flex:1 1 150px;    
-}
-
-.main-creditcard-container form .submit-btn
-{
-    width: 100%;
-    background: linear-gradient(45deg, blue, #a0e9ff);
-    margin-top: 20px;
+.otp-field input {
+    width: 40px;
+    font-size: 32px;
     padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: .2s linear;
-}
-
-.main-creditcard-container form .submit-btn:hover
-{
-    letter-spacing: 2px;
-    opacity: .8;
-}
-
-.main-creditcard-container .card-container
-{
-    margin-bottom: -150px;
-    position: relative;
-    height: 250px;
-    width: 400px;
-}
-
-.main-creditcard-container .card-container .card-front
-{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, blue, #a0e9ff);
-    border-radius: 5px;
-    backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
-    padding: 20px;
-    transition: transform .4s ease-out;
-}
-
-.main-creditcard-container .card-container .card-front .image 
-{
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-}
-
-.main-creditcard-container .card-container .card-front .image img
-{
-    height: 50px;
-}
-
-.main-creditcard-container .card-container .card-front .card-number-box
-{
-    padding: 30px 0;
-    font-size: 22px;
-    color: #fff;
-
-}
-
-.main-creditcard-container .card-container .card-front .card-flexbox
-{
-    display:  flex;
-}
-
-.main-creditcard-container .card-container .card-front .card-flexbox .card-box:nth-child(1)
-{
-    margin-right: auto;
-}
-.main-creditcard-container .card-container .card-front .card-flexbox .card-box
-{
-    font-size: 15px;
-    color: #fff;
-}
-
-.main-creditcard-container .card-container .card-back
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(45deg, blue, #a0e9ff);
     border-radius: 5px;
-    padding: 20px 0;
-    text-align: right;
-    backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
-    transform: perspective(1000px) rotateY(180deg);
-    transition: transform .4s ease-out;
+    margin: 2px;
+    border: 2px solid var(--container-alter-color);
+    background-color: var(--text-color);
+    font-weight: bold;
+    color: var(--container-color);  
+    outline: none;
+    transition: all 0.1s;
 }
 
-.main-creditcard-container .card-container .card-back .stripe
-{
-    background: #000;
-    width: 100%;
-    margin: 10px 0;
-    height: 50px;
+.otp-field input:focus {
+    border: 2px solid #2fd498;
+    box-shadow: 0 0 2px 2px #2fd498;
 }
 
-.main-creditcard-container .card-container .card-back .card-box
-{
-    padding: 0 20px;
+.disabled {
+    opacity: 0.5;
 }
 
-.main-creditcard-container .card-container .card-back .card-box span
-{
-    color: #fff;
-    font-size: 15px;
+.space {
+    margin-right: 1rem !important;
 }
 
-.main-creditcard-container .card-container .card-back .card-box .cvv-box
-{
-    height: 50px;
-    padding: 10px;
-    margin-top: 5px;
-    color: #333;
-    background: #fff;
-    border-radius: 5px;
-    width: 100%;
+.pin-logo{
+    width: 20%;
 }
-
-.main-creditcard-container .card-container .card-back .card-box img
-{
-    margin-top: 30px;
-    height: 40px;
-}
-
-input[type="file"]{
-    display: none;
-}
-label{
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    background: #2b7dc0;
-    text-align: center;
-    padding: 12px 23px;
-    font-size: 15px;
-    user-select: none;
-    cursor: pointer;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.checkbox{
-    color: #999;
-}
-
 
 /*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
@@ -1011,7 +838,7 @@ a:hover{
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     border-radius: 5rem;
-    width: 40%;
+    width: 100px;
     text-align: center;
         /* border-radius: 50%; */
 }
@@ -1180,7 +1007,8 @@ a:hover{
     height: auto;
     font-size: var(--normal-font-size);
     color: var(--text-color);
-    font-family: var(--body-font);
+    background-color: var(--container-alter-color);
+    /* font-family: var(--body-font); */
     padding: .75rem 1rem 0.75rem;
     font-weight: var(--font-semi-bold);
 
@@ -1248,6 +1076,9 @@ a:hover{
     font-family: var(--body-font);
     transition: .3s;
 
+}
+.button__summit{
+    color:var(--text-color);
 }
 /* =================== button ================== */
 .button__summit{
@@ -2139,3 +1970,17 @@ a:hover{
     width: 1000px;
 	z-index: -10;
    }
+   /* ============================ PIN =================== */
+   .pin-display{
+    margin-top:var(--mb-1-5);
+    width: 100%;
+    text-align:center;
+    height: auto;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    background-color: var(--container-alter-color);
+    /* font-family: var(--body-font); */
+    padding: .75rem 1rem 0.75rem;
+    font-weight: var(--font-semi-bold);
+   }
+
