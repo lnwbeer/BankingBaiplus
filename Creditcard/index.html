@@ -13,31 +13,74 @@
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
+
+    <nav>
+        <div class="nav-bar home__containter header" >
+              <!--LOGO-->
+              <a href="index.html" class="logo"><img src="Asset/img/Baiplus_final-removebg-preview.png" class="nav__icon" alt="" /></i>BaiPlus</a>
+              <!--Menu Icon-->
+              <input type="checkbox" name="" id="menu">
+              <label for="menu"><i class='bx bx-menu' id="menu-icon" ></i></label>
+              <!--Navlist-->
+              <ul class="navbar">
+                  <li><a href="account__main.html">Home</a></li>
+
+                  <li class="home__dropdown-link">
+                    <div href="">TRANSACTION&nbsp;&nbsp;<i class='bx bxs-chevron-down'></i></div>
+                    <ul class="home__dropdown" >
+                        <li><a href="tranfer_selectBank.html" >Tranfer</a></li>
+                        <li><a href="paybill.html" >Pay Bill</a></li>
+                        <li><a href="withdraw.html" >Withdraw</a></li> 
+                        <li><a href="loan.html" >Loan</a></li>    
+                    </ul>
+                </li>
+                <li><a href="history_tran.html">HISTORY</a></li>
+                  <li><a href="card">CRADITCARD</a></li>
+
+
+                  <li class="nav__btns">           
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                  </li>
+    
+                  <li class="home__dropdown-link">
+                    <div class="nav__acc-bg">
+                        <div class="nav__img"><img src="Asset/img/avatar.svg"></div>
+                    </div>
+                    <ul class="home__dropdown" >
+                        <li><a href="account.html">Setting</a></li>
+                        <li><a href="complex.html">Anothers</a></li>
+                        <li><a href="index.html">Log Out</a></li>
+                    </ul>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+
 <div class="main-creditcard-container">
     <div class="card-container">
-        <div class="front">
+        <div class="card-front">
             <div class="image">
                 <img src="chip.png" alt="">
                 <img src="master.png" alt="">
             </div>
             <div class="card-number-box">################</div>
-            <div class="flexbox">
-                <div class="box">
+            <div class="card-flexbox">
+                <div class="card-box">
                     <span>card holder</span>
                     <div class="card-holder-name">full name</div>
                 </div>
-                <div class="box">
+                <div class="card-box">
                     <span>expires</span>
                     <div class="expiration">
                         <span class="exp-month">mm</span>
                         <span class="exp-year">yy</span>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
-        <div class="back">
+        <div class="card-back">
             <div class="stripe"></div>
-                <div class="box">
+                <div class="card-box">
                     <span>cvv</span>
                     <div class="cvv-box"></div>
                     <img src="master.png" alt="">
@@ -53,7 +96,7 @@
                 <span>card holder</span>
                 <p type="text" class="card-holder-input">PRAYUT CHANO-CHA</p>
             </div>
-            <div class="flexbox">
+            <div class="card-flexbox">
                 <div class="inputBox">
                 <span>expiration mm</span>
                 <p name="" id="" class="month-input">12</p>
@@ -95,13 +138,13 @@
     }
 
     document.querySelector('.cvv-input').onmouseenter = () => {
-        document.querySelector('.front').style.transform ='perspective(1000px) rotateY(-180deg)';
-        document.querySelector('.back').style.transform ='perspective(1000px) rotateY(0deg)';
+        document.querySelector('.card-front').style.transform ='perspective(1000px) rotateY(-180deg)';
+        document.querySelector('.card-back').style.transform ='perspective(1000px) rotateY(0deg)';
     }
 
     document.querySelector('.cvv-input').onmouseleave = () => {
-        document.querySelector('.front').style.transform ='perspective(1000px) rotateY(0deg)';
-        document.querySelector('.back').style.transform ='perspective(1000px) rotateY(180deg)';
+        document.querySelector('.card-front').style.transform ='perspective(1000px) rotateY(0deg)';
+        document.querySelector('.card-back').style.transform ='perspective(1000px) rotateY(180deg)';
     }
 
     document.querySelector('.cvv-input').oninput = () => {
